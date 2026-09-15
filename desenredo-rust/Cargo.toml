@@ -1,0 +1,23 @@
+[package]
+name = "desenredo-rust"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+native-test = []
+
+[dependencies]
+desenredo-abi.workspace = true
+desenredo-lsda.workspace = true
+desenredo-personality.workspace = true
+fack.workspace = true
+
+[[test]]
+name = "foreign_drop"
+path = "tests/native/foreign_drop.rs"
+required-features = ["native-test"]
+
+[lints]
+workspace = true
