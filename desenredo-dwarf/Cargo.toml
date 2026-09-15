@@ -1,0 +1,12 @@
+[package]
+name = "desenredo-dwarf"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+fack.workspace = true
+gimli.workspace = true
+
+[lints]
+workspace = true
