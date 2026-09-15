@@ -1,0 +1,19 @@
+[package]
+name = "desenredo"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+desenredo-abi.workspace = true
+desenredo-cxx.workspace = true
+desenredo-dwarf.workspace = true
+desenredo-lsda.workspace = true
+desenredo-macro.workspace = true
+desenredo-panic.workspace = true
+desenredo-personality.workspace = true
+desenredo-rust.workspace = true
+desenredo-unwind.workspace = true
+
+[lints]
+workspace = true
