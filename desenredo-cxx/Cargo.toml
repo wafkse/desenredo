@@ -1,0 +1,22 @@
+[package]
+name = "desenredo-cxx"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+native-test = []
+
+[dependencies]
+desenredo-abi.workspace = true
+desenredo-lsda.workspace = true
+desenredo-personality.workspace = true
+fack.workspace = true
+
+[[example]]
+name = "cxx_throw"
+required-features = ["native-test"]
+
+[lints]
+workspace = true
