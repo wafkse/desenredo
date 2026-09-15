@@ -1,0 +1,28 @@
+[package]
+name = "desenredo-no-std-linux"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+build = "build.rs"
+
+[features]
+default = ["catch"]
+catch = []
+runtime = ["catch"]
+ffi-c-abort = ["runtime"]
+
+[dependencies]
+desenredo.workspace = true
+desenredo-panic.workspace = true
+fack.workspace = true
+rustix.workspace = true
+
+[[bin]]
+name = "desenredo-no-std-linux"
+path = "src/main.rs"
+test = false
+bench = false
+required-features = ["runtime"]
+
+[lints]
+workspace = true
