@@ -1,0 +1,13 @@
+[package]
+name = "desenredo-personality"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+desenredo-abi.workspace = true
+fack.workspace = true
+gimli.workspace = true
+
+[lints]
+workspace = true
