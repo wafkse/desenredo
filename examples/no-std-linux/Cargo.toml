@@ -1,0 +1,29 @@
+[package]
+name = "desenredo-example-no-std-linux"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+build = "build.rs"
+
+[features]
+default = ["catch"]
+catch = []
+runtime = ["catch"]
+
+[dependencies]
+addr2line.workspace = true
+desenredo.workspace = true
+object.workspace = true
+rustix = { workspace = true, features = ["fs"] }
+spinning_top.workspace = true
+talc.workspace = true
+
+[[bin]]
+name = "desenredo-no-std-worker"
+path = "src/main.rs"
+test = false
+bench = false
+required-features = ["runtime"]
+
+[lints]
+workspace = true
